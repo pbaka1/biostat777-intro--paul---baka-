@@ -1,0 +1,54 @@
+---
+title: "Example analysis: Palmer Penguins"
+bibliography: references.bib
+link-citations: true
+format:
+  html:
+    df-print: paged
+---
+
+\`\`\`{r}
+
+#\| label: setup
+
+#\| include: false
+
+library(tidyverse)
+
+library(palmerpenguins)
+
+library(janitor)
+
+library(lubridate)
+
+library(gt)
+
+theme_set(theme_minimal(base_size = 13))
+
+## **1) Question & audience**
+
+::: callout-important
+
+**Question.** How do **species** and **island** relate to **body mass** and **bill measurements** in penguins, and what patterns emerge across **sex**?
+
+**Intended audience.** Public-health and ecology students learning tidy data analysis and visualization who want an approachable, fully reproducible example.
+
+:::
+
+::: {.column-margin}
+
+**Margin note:** The Palmer Archipelago hosts Adelie, Gentoo, and Chinstrap penguins—classic for tidyverse teaching.
+
+:::
+
+**2) Data source & data dictionary**
+
+-   **Original data:** The palmerpenguins R package provides cleaned measurements of penguins from the Palmer Archipelago, Antarctica \[\@horst2020palmerpenguins\].
+
+-   **Where to get it:** CRAN package palmerpenguins.
+
+-   **Data dictionary:** https://allisonhorst.github.io/palmerpenguins/reference/penguins.html
+
+    peng \<- penguins \|\> janitor::clean_names() \|\> \# clean_names() tidyr::drop_na(species, island, sex, body_mass_g, bill_length_mm, bill_depth_mm) \|\> \# drop_na() dplyr::mutate( body_mass_kg = body_mass_g / 1000, \# mutate() species = forcats::fct_reorder(species, body_mass_kg, .fun = median) ) \|\> dplyr::select(species, island, sex, bill_length_mm, bill_depth_mm, body_mass_kg) \|\> \# select() dplyr::arrange(species, island) \# arrange()
+
+    long_bills \<- peng \|\> tidyr::pivot_longer( \# pivot_longer() c(bill_length_mm, bill_depth_mm), names_to = "bill_metric", values_to = "bill_value" )

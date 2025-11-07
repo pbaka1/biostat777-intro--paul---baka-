@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About :\nI am a medical doctor from Ghana and an MPH candidate at the Johns Hopkins Bloomberg School of Public Health. My long-term ambition is to become a **pediatric oncologist**, improving outcomes for children with cancer through research and equitable care delivery. As part of my MPH journey, I’m taking advanced coursework in ** statistical programimg paradigms and workflows** and building strong **R** skills for data analysis, which I see as essential for modern, precision-medicine research.\nResearch interests\n- Pediatric hematologic cancers:novel genetic sequencing approaches and translational pipelines.\n- Precision medicine & big data:reproducible analytics, rigorous inference, and clinically meaningful endpoints.  \n- Equity: ensuring innovations reach children in low-resource settings.\nTechnical toolbox\n- R (tidyverse, visualization, data wrangling)  \n- Reproducible workflows (Quarto, literate programming)  \n- Intro methods for genomics/biostatistics; growing skills in modeling and data engineering\n\n\n\n\n\n\nNoteConnect with me\n\n\n\n\n     \n\nLet’s connect! I’m always open to collaborations, mentorship, and new ideas."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I’m a physician from Ghana and an MPH candidate at Johns Hopkins focusing on health policy and digital health. I’m passionate about equity-centered, data-driven public health.\n\n\n- ⚽ Football fanatic: lifetime Messi admirer.\n- 🍳 Cooking therapy: I cook when I’m stressed.\n- 🗳️ Political enthusiast: always scheming ways to make Ghana better.\n- 🌍 Travel lover: Iceland is high on my list.\n- ⭐ Three wishes : meet Steph Curry, Lewis Hamilton, and Lionel Messi.\n\n\n\n\n\nAbout: background and interests\n\nExample analysis: a reproducible mini-analysis in R\n\n\n\n\n\n\n\nTip\n\n\n\nFun fact:\n**Inspiration.** I often revisit Steve Jobs’ 2005 Stanford commencement address that keeps me grounded and bold."
+  },
+  {
+    "objectID": "index.html#fun-facts",
+    "href": "index.html#fun-facts",
+    "title": "Home",
+    "section": "",
+    "text": "- ⚽ Football fanatic: lifetime Messi admirer.\n- 🍳 Cooking therapy: I cook when I’m stressed.\n- 🗳️ Political enthusiast: always scheming ways to make Ghana better.\n- 🌍 Travel lover: Iceland is high on my list.\n- ⭐ Three wishes : meet Steph Curry, Lewis Hamilton, and Lionel Messi."
+  },
+  {
+    "objectID": "index.html#what-youll-find-here",
+    "href": "index.html#what-youll-find-here",
+    "title": "Home",
+    "section": "",
+    "text": "About: background and interests\n\nExample analysis: a reproducible mini-analysis in R\n\n\n\n\n\n\n\nTip\n\n\n\nFun fact:\n**Inspiration.** I often revisit Steve Jobs’ 2005 Stanford commencement address that keeps me grounded and bold."
+  },
+  {
+    "objectID": "example-analysis.html",
+    "href": "example-analysis.html",
+    "title": "Example analysis: Palmer Penguins",
+    "section": "",
+    "text": "#| include: false \n\nlibrary(tidyverse) \n\nlibrary(palmerpenguins) \n\nlibrary(janitor)\n\n library(lubridate) \n\nlibrary(gt) \n\ntheme_set(theme_minimal(base_size = 13))\npeng &lt;- penguins |&gt;\n  janitor::clean_names() |&gt;                                 # clean_names()  — janitor\n  tidyr::drop_na(species, island, sex, body_mass_g,\n                 bill_length_mm, bill_depth_mm) |&gt;          # drop_na()     — tidyr\n  dplyr::mutate(\n    body_mass_kg = body_mass_g / 1000,                      # mutate()      — dplyr\n    species = forcats::fct_reorder(species, body_mass_kg, .fun = median)\n  ) |&gt;\n  dplyr::select(species, island, sex, bill_length_mm,\n                bill_depth_mm, body_mass_kg) |&gt;             # select()      — dplyr\n  dplyr::arrange(species, island)                           # arrange()     — dplyr\n\nlong_bills &lt;- peng |&gt;\n  tidyr::pivot_longer(                                      # pivot_longer()— tidyr\n    c(bill_length_mm, bill_depth_mm),\n    names_to = \"bill_metric\",\n    values_to = \"bill_value\"\n  )"
+  },
+  {
+    "objectID": "example-analysis.html#summary",
+    "href": "example-analysis.html#summary",
+    "title": "Example analysis: Palmer Penguins",
+    "section": "Summary",
+    "text": "Summary\nThe dataset shows clear morphological separation among species, with Gentoo typically heavier and with longer bills than Adelie and Chinstrap. Faceting by island suggests context matters: distributions shift by location, hinting at ecological or sampling differences. Sex also contributes to variance in mass, consistent with mild sexual dimorphism. Together, these patterns are easy to communicate with tidy wrangling and layered graphics."
+  },
+  {
+    "objectID": "example-analysis.html#function-checklist",
+    "href": "example-analysis.html#function-checklist",
+    "title": "Example analysis: Palmer Penguins",
+    "section": "Function checklist",
+    "text": "Function checklist\n\ndplyr: mutate, select, arrange, group_by, summarise, n\ntidyr: drop_na, pivot_longer\nggplot2: geom_point, geom_smooth, geom_boxplot, geom_histogram, facet_wrap, plus labs, theme"
+  },
+  {
+    "objectID": "example-analysis.html#citations",
+    "href": "example-analysis.html#citations",
+    "title": "Example analysis: Palmer Penguins",
+    "section": "Citations",
+    "text": "Citations\nWe used palmerpenguins [@horst2020palmerpenguins], tidy data manipulation [@wickham2014dplyr], and grammar of graphics [@wickham2016ggplot2].\n references.bibMenu: File ▸ New File ▸ Text File → Save as references.bib ```bibtex (misc?){horst2020palmerpenguins, title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data}, author = {Horst, Allison Marie and Hill, Alison Presmanes and Gorman, Kristen Brandon}, year = {2020}, howpublished = {}, note = {R package} }(article?){wickham2014dplyr, title={dplyr: a Grammar of Data Manipulation}, author={Wickham, Hadley and Francois, Romain and Henry, Lionel and M{“u}ller, Kirill}, journal={R package version}, volume={0.1}, year={2014}, howpublished = {} }(book?){wickham2016ggplot2, title={ggplot2: Elegant Graphics for Data Analysis}, author={Wickham, Hadley}, year={2016}, publisher={Springer}, edition={2nd} })"
+  }
+]

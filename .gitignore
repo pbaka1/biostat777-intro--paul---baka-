@@ -7,3 +7,6 @@
 _site/
 .quarto/
 README_files/
+
+/.quarto/
+**/*.quarto_ipynb

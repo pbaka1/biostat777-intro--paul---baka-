@@ -1,0 +1,9 @@
+# RStudio / macOS / Quarto build + cache
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+_site/
+.quarto/
+README_files/

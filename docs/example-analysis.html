@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Paul Worlanyo Baka">
 
-<title>Example analysis: Palmer Penguins – Paul Worlanyo Baka</title>
+<title>Example Analysis – Paul Worlanyo Baka</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +56,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -179,6 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><strong>Summary</strong></a></li>
   <li><a href="#function-checklist" id="toc-function-checklist" class="nav-link" data-scroll-target="#function-checklist"><strong>Function checklist</strong></a></li>
   <li><a href="#citations" id="toc-citations" class="nav-link" data-scroll-target="#citations"><strong>Citations</strong></a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -188,13 +210,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Example analysis: Palmer Penguins</h1>
+<h1 class="title">Example Analysis</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Paul Worlanyo Baka </p>
+          </div>
+  </div>
     
   
     
@@ -332,7 +360,7 @@ Important
 </section>
 <section id="external-image" class="level1">
 <h1>External image</h1>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Pygoscelis_adeliae_2.jpg" class="img-fluid" style="width:50.0%" data-fig-cap="Adélie penguin. Source: Wikimedia Commons (CC BY-SA 3.0)." alt="Adélie penguin."></p>
+<p><img src="images/Gentoo.jpeg" class="img-fluid" data-fig-cap="Adélie penguin. Source: Wikimedia Commons (CC BY-SA 3.0)." alt="Adélie penguin."></p>
 </section>
 <section id="summary-table." class="level1">
 <h1>Summary Table.</h1>
@@ -352,23 +380,23 @@ Important
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">"Body mass summary by species and sex"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(mean_mass, sd_mass), <span class="at">decimals =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="irjxjhssdr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#irjxjhssdr table {
+<div id="wjsxosgoix" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wjsxosgoix table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#irjxjhssdr thead, #irjxjhssdr tbody, #irjxjhssdr tfoot, #irjxjhssdr tr, #irjxjhssdr td, #irjxjhssdr th {
+#wjsxosgoix thead, #wjsxosgoix tbody, #wjsxosgoix tfoot, #wjsxosgoix tr, #wjsxosgoix td, #wjsxosgoix th {
   border-style: none;
 }
 
-#irjxjhssdr p {
+#wjsxosgoix p {
   margin: 0;
   padding: 0;
 }
 
-#irjxjhssdr .gt_table {
+#wjsxosgoix .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -394,12 +422,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_caption {
+#wjsxosgoix .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#irjxjhssdr .gt_title {
+#wjsxosgoix .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -411,7 +439,7 @@ Important
   border-bottom-width: 0;
 }
 
-#irjxjhssdr .gt_subtitle {
+#wjsxosgoix .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -423,7 +451,7 @@ Important
   border-top-width: 0;
 }
 
-#irjxjhssdr .gt_heading {
+#wjsxosgoix .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -435,13 +463,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_bottom_border {
+#wjsxosgoix .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_col_headings {
+#wjsxosgoix .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -456,7 +484,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_col_heading {
+#wjsxosgoix .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -476,7 +504,7 @@ Important
   overflow-x: hidden;
 }
 
-#irjxjhssdr .gt_column_spanner_outer {
+#wjsxosgoix .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -488,15 +516,15 @@ Important
   padding-right: 4px;
 }
 
-#irjxjhssdr .gt_column_spanner_outer:first-child {
+#wjsxosgoix .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#irjxjhssdr .gt_column_spanner_outer:last-child {
+#wjsxosgoix .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#irjxjhssdr .gt_column_spanner {
+#wjsxosgoix .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -508,11 +536,11 @@ Important
   width: 100%;
 }
 
-#irjxjhssdr .gt_spanner_row {
+#wjsxosgoix .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#irjxjhssdr .gt_group_heading {
+#wjsxosgoix .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -538,7 +566,7 @@ Important
   text-align: left;
 }
 
-#irjxjhssdr .gt_empty_group_heading {
+#wjsxosgoix .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -553,15 +581,15 @@ Important
   vertical-align: middle;
 }
 
-#irjxjhssdr .gt_from_md > :first-child {
+#wjsxosgoix .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#irjxjhssdr .gt_from_md > :last-child {
+#wjsxosgoix .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#irjxjhssdr .gt_row {
+#wjsxosgoix .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -580,7 +608,7 @@ Important
   overflow-x: hidden;
 }
 
-#irjxjhssdr .gt_stub {
+#wjsxosgoix .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -593,7 +621,7 @@ Important
   padding-right: 5px;
 }
 
-#irjxjhssdr .gt_stub_row_group {
+#wjsxosgoix .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -607,15 +635,15 @@ Important
   vertical-align: top;
 }
 
-#irjxjhssdr .gt_row_group_first td {
+#wjsxosgoix .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#irjxjhssdr .gt_row_group_first th {
+#wjsxosgoix .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#irjxjhssdr .gt_summary_row {
+#wjsxosgoix .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -625,16 +653,16 @@ Important
   padding-right: 5px;
 }
 
-#irjxjhssdr .gt_first_summary_row {
+#wjsxosgoix .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_first_summary_row.thick {
+#wjsxosgoix .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#irjxjhssdr .gt_last_summary_row {
+#wjsxosgoix .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -644,7 +672,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_grand_summary_row {
+#wjsxosgoix .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -654,7 +682,7 @@ Important
   padding-right: 5px;
 }
 
-#irjxjhssdr .gt_first_grand_summary_row {
+#wjsxosgoix .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -664,7 +692,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_last_grand_summary_row_top {
+#wjsxosgoix .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -674,11 +702,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_striped {
+#wjsxosgoix .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#irjxjhssdr .gt_table_body {
+#wjsxosgoix .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -687,7 +715,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_footnotes {
+#wjsxosgoix .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -701,7 +729,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_footnote {
+#wjsxosgoix .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -710,7 +738,7 @@ Important
   padding-right: 5px;
 }
 
-#irjxjhssdr .gt_sourcenotes {
+#wjsxosgoix .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -724,7 +752,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#irjxjhssdr .gt_sourcenote {
+#wjsxosgoix .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -732,72 +760,72 @@ Important
   padding-right: 5px;
 }
 
-#irjxjhssdr .gt_left {
+#wjsxosgoix .gt_left {
   text-align: left;
 }
 
-#irjxjhssdr .gt_center {
+#wjsxosgoix .gt_center {
   text-align: center;
 }
 
-#irjxjhssdr .gt_right {
+#wjsxosgoix .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#irjxjhssdr .gt_font_normal {
+#wjsxosgoix .gt_font_normal {
   font-weight: normal;
 }
 
-#irjxjhssdr .gt_font_bold {
+#wjsxosgoix .gt_font_bold {
   font-weight: bold;
 }
 
-#irjxjhssdr .gt_font_italic {
+#wjsxosgoix .gt_font_italic {
   font-style: italic;
 }
 
-#irjxjhssdr .gt_super {
+#wjsxosgoix .gt_super {
   font-size: 65%;
 }
 
-#irjxjhssdr .gt_footnote_marks {
+#wjsxosgoix .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#irjxjhssdr .gt_asterisk {
+#wjsxosgoix .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#irjxjhssdr .gt_indent_1 {
+#wjsxosgoix .gt_indent_1 {
   text-indent: 5px;
 }
 
-#irjxjhssdr .gt_indent_2 {
+#wjsxosgoix .gt_indent_2 {
   text-indent: 10px;
 }
 
-#irjxjhssdr .gt_indent_3 {
+#wjsxosgoix .gt_indent_3 {
   text-indent: 15px;
 }
 
-#irjxjhssdr .gt_indent_4 {
+#wjsxosgoix .gt_indent_4 {
   text-indent: 20px;
 }
 
-#irjxjhssdr .gt_indent_5 {
+#wjsxosgoix .gt_indent_5 {
   text-indent: 25px;
 }
 
-#irjxjhssdr .katex-display {
+#wjsxosgoix .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#irjxjhssdr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wjsxosgoix div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -905,13 +933,26 @@ Note
 <section id="citations" class="level2">
 <h2 class="anchored" data-anchor-id="citations"><strong>Citations</strong></h2>
 <p>We used palmerpenguins [@horst2020palmerpenguins], tidy data manipulation [@wickham2014dplyr], and grammar of graphics [@wickham2016ggplot2].</p>
-<p><a href="2f"></a> references.bibMenu: File ▸ New File ▸ Text File → Save as references.bib ```bibtex <span class="citation" data-cites="misc">(<a href="#ref-misc" role="doc-biblioref"><strong>misc?</strong></a>)</span>{horst2020palmerpenguins, title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data}, author = {Horst, Allison Marie and Hill, Alison Presmanes and Gorman, Kristen Brandon}, year = {2020}, howpublished = {}, note = {R package} }<span class="citation" data-cites="article">(<a href="#ref-article" role="doc-biblioref"><strong>article?</strong></a>)</span>{wickham2014dplyr, title={dplyr: a Grammar of Data Manipulation}, author={Wickham, Hadley and Francois, Romain and Henry, Lionel and M{“u}ller, Kirill}, journal={R package version}, volume={0.1}, year={2014}, howpublished = {} }<span class="citation" data-cites="book">(<a href="#ref-book" role="doc-biblioref"><strong>book?</strong></a>)</span>{wickham2016ggplot2, title={ggplot2: Elegant Graphics for Data Analysis}, author={Wickham, Hadley}, year={2016}, publisher={Springer}, edition={2nd} })</p>
+</section>
+<section id="references" class="level2">
+
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-horst2020palmerpenguins" class="csl-entry" role="listitem">
+Horst, Allison Marie, Alison Presmanes Hill, and Kristen Brandon Gorman. 2020. <span>“Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data.”</span> <a href="https://allisonhorst.github.io/palmerpenguins/">https://allisonhorst.github.io/palmerpenguins/</a>.
+</div>
+<div id="ref-wickham2016ggplot2" class="csl-entry" role="listitem">
+Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. 2nd ed. Springer.
+</div>
+<div id="ref-wickham2014dplyr" class="csl-entry" role="listitem">
+Wickham, Hadley, Romain Francois, Lionel Henry, and Kirill Mueller. 2014. <span>“Dplyr: A Grammar of Data Manipulation.”</span> <em>R Package Version</em> 0.1. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

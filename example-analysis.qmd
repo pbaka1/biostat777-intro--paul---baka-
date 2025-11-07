@@ -1,10 +1,12 @@
 ---
-title: "Example analysis: Palmer Penguins"
-bibliography: references.bib
-link-citations: true
+title: "Example Analysis"
+author: "Paul Worlanyo Baka"
 format:
   html:
     df-print: paged
+bibliography: references.bib
+nocite: |
+  @*
 ---
 
 ```{r}
@@ -44,6 +46,7 @@ theme_set(theme_minimal(base_size = 13))
     **Data dictionary:** https://allisonhorst.github.io/palmerpenguins/reference/penguins.html
 
     # 
+
     Minimal Wrangling
 
 ```{r}
@@ -112,9 +115,9 @@ ggplot(peng, aes(body_mass_kg)) +
   )
 ```
 
-# External image 
+# External image
 
-![](https://upload.wikimedia.org/wikipedia/commons/0/0b/Pygoscelis_adeliae_2.jpg){fig-alt="Adélie penguin." width="50%" fig-cap="Adélie penguin. Source: Wikimedia Commons (CC BY-SA 3.0)."}
+![](images/Gentoo.jpeg){fig-cap="Adélie penguin. Source: Wikimedia Commons (CC BY-SA 3.0)." fig-alt="Adélie penguin."}
 
 # Summary Table.
 
@@ -147,7 +150,7 @@ summary_tbl |>
 
 The dataset shows clear morphological separation among species, with Gentoo typically heavier and with longer bills than Adelie and Chinstrap. Faceting by island suggests context matters: distributions shift by location, hinting at ecological or sampling differences. Sex also contributes to variance in mass, consistent with mild sexual dimorphism. Together, these patterns are easy to communicate with tidy wrangling and layered graphics.
 
-## **Function checklist** 
+## **Function checklist**
 
 -   **dplyr:** mutate, select, arrange, group_by, summarise, n
 
@@ -155,9 +158,8 @@ The dataset shows clear morphological separation among species, with Gentoo typi
 
 -   **ggplot2:** geom_point, geom_smooth, geom_boxplot, geom_histogram, facet_wrap, plus labs, theme
 
-##  **Citations**
+## **Citations**
 
 We used palmerpenguins \[\@horst2020palmerpenguins\], tidy data manipulation \[\@wickham2014dplyr\], and grammar of graphics \[\@wickham2016ggplot2\].
 
-[
-](2f) references.bibMenu: File ▸ New File ▸ Text File → Save as references.bib ```bibtex @misc{horst2020palmerpenguins, title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data}, author = {Horst, Allison Marie and Hill, Alison Presmanes and Gorman, Kristen Brandon}, year = {2020}, howpublished = {\url{https://allisonhorst.github.io/palmerpenguins/}}, note = {R package} }@article{wickham2014dplyr, title={dplyr: a Grammar of Data Manipulation}, author={Wickham, Hadley and Francois, Romain and Henry, Lionel and M{"u}ller, Kirill}, journal={R package version}, volume={0.1}, year={2014}, howpublished = {\url{https://CRAN.R-project.org/package=dplyr}} }@book{wickham2016ggplot2, title={ggplot2: Elegant Graphics for Data Analysis}, author={Wickham, Hadley}, year={2016}, publisher={Springer}, edition={2nd} })
+## References

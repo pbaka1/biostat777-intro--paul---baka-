@@ -1,5 +1,0 @@
-.navbar, .navbar-nav .nav-link { font-size: 1.05rem; }
-h1, h2, h3 { scroll-margin-top: 90px; }
-.callout { border-radius: 0.75rem; }
-img { border-radius: 12px; }
-.figure-caption, .caption { font-size: 0.9rem; color: #6c757d; }

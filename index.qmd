@@ -6,7 +6,7 @@ page-layout: article
 date: last-modified
 ---
 
-# Hello,  I'm Paul Baka 👋
+# Hello, I'm Paul Baka 👋
 
 I’m a physician from Ghana and an MPH candidate at Johns Hopkins focusing on health policy and digital health. I’m passionate about equity-centered, data-driven public health.
 
@@ -32,5 +32,5 @@ I’m a physician from Ghana and an MPH candidate at Johns Hopkins focusing on h
 ::: callout-tip
 **Fun fact:**
 
-\*\*Inspiration.\*\* I often revisit Steve Jobs’ 2005 Stanford commencement [address]( ) that keeps me grounded and bold.
+\*\*Inspiration.\*\* I often revisit Steve Jobs’ 2005 Stanford commencement \[[address](https://www.youtube.com/watch?v=UF8uR6Z6KLc)\] that keeps me grounded and bold.
 :::
